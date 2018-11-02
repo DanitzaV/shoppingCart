@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as ReactRouter, Route, Redirect, Switch } from 'react-router-dom';
+import { BrowserRouter as ReactRouter, Route, Redirect} from 'react-router-dom';
 import App from './App';
 import List from './Componentes/list/List';
 import AddCart from './Componentes/addCart/AddCart';

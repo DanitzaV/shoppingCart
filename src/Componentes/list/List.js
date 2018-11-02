@@ -43,7 +43,7 @@ class List extends Component {
         <Card body >
           <CardTitle><strong>Nombre: </strong> {e.title}</CardTitle>
           <CardText><strong>Precio: </strong> {e.price}</CardText>
-          <Button onClick={() => this.datosCarrito(e)}>Agregar al carrito</Button>
+          <Button style={{backgroundColor: "turquoise"}} onClick={() => this.datosCarrito(e)}>Agregar al carrito</Button>
         </Card>
       </Col>
     ))

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import fire from './../../fire';
-import Navbars from './../navbar/Navbar';
+import { Container, Row, Col, Button } from 'reactstrap';
+import './Style.css'
 
 class AddCart extends Component {
   constructor() {
@@ -9,6 +10,7 @@ class AddCart extends Component {
       items: []
     }
     this.itemsRef = fire.database().ref('addCarrito')
+
   }
 
   sumaTotal() {
@@ -49,28 +51,32 @@ class AddCart extends Component {
     this.itemsRef.child(e.key).remove()
   }
 
- 
+
 
   render() {
     return (
-      <div>
-        <h2>Tu Carrito de Compras</h2>
-        <ul>
+      <Container>
+        <h2 style={{ marginBottom: "2em",marginTop: "1em"}}>Tu Carrito de Compras</h2>
+        <Row>
           {
             this.state.items.map((e, i) => (
-              <li key={i}>
-                <div>
-                  <p>nombre: {e.title}  precio: {e.price}</p>
-                </div>
-                <button onClick={() => this.borrar(e)}>borrar</button>
-              </li>
+              <Col xs="12" className="contenedor" key={i}>
+                <p style={{ marginLeft: "2em" }}>
+                  <strong>Nombre: </strong>{e.title}
+                </p>
+                <p style={{ marginLeft: "2em" }}>
+                  <strong>Precio: </strong>{e.price}
+                </p>
+                <Button style={{ marginLeft: "2em" }} onClick={() => this.borrar(e)}>borrar</Button>
+              </Col>
             ))
           }
-        </ul>
-        <p>Total: ${this.sumaTotal()}</p>
-      </div>
+        </Row>
+        <p><strong>Total: </strong> ${this.sumaTotal()}</p>
+      </Container>
     )
   }
 }
+
 
 export default AddCart;

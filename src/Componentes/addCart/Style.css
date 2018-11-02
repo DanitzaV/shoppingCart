@@ -1,0 +1,8 @@
+.contenedor{
+  display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+    background-color: turquoise;
+    padding: 1em;
+    border-radius: 5em;
+}
