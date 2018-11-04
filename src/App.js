@@ -1,28 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+import React from "react";
+import Shopping from './components/list/Shopping';
+import List from './components/navbar/List';
+import { Grid } from "@material-ui/core";
+const App = () => (
+  <Grid container className="">
+    <Grid item md={6} style={{ backgroundColor: "whitesmoke", height: "100vh" }}>
+      <h2 style={{textAlign: "center"}}>Productos</h2>
+      <List />
+    </Grid>
+    <Grid item md={6}>
+      <div className="">
+        <h2 style={{textAlign: "center"}}>Carrito de Compras</h2>
       </div>
-    );
-  }
-}
+      <div>
+        <Shopping />
+      </div>
+    </Grid>
 
+  </Grid>
+);
 export default App;
