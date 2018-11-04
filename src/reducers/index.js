@@ -1,6 +1,5 @@
 import { ADD_ARTICLE,FETCH_TODOS,REMOVE_ITEMS, PRODUCTOS_ITEMS } from "../constants/action-types";
 import { combineReducers} from 'redux';
-import {todosRef} from './../fire';
 
 
 const initialState = {

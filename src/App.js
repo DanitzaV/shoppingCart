@@ -2,6 +2,7 @@ import React from "react";
 import Shopping from './components/list/Shopping';
 import List from './components/navbar/List';
 import { Grid } from "@material-ui/core";
+
 const App = () => (
   <Grid container className="">
     <Grid item md={6} style={{ backgroundColor: "whitesmoke", height: "100vh" }}>

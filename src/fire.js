@@ -8,7 +8,6 @@ const app = firebase.initializeApp({
   storageBucket: "carrito-de-compras-9ccd6.appspot.com",
   messagingSenderId: "787501379181"
 });
-
 export const databaseRef = app.database();
 
 export const todosRef = databaseRef.ref('addCarrito');

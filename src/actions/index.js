@@ -33,7 +33,6 @@ export const fetchToDos = () => async dispatch => {
 
 export const Products = () => async dispatch => {
   productos.on("child_added", snapshot => {
-    console.log(snapshot.val())
     dispatch({
       type: PRODUCTOS_ITEMS,
       payload: {
