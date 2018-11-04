@@ -1,3 +1,3 @@
 # Shopping Cart
 
-## Hecho en reat con redux y firebase como base de datos.
+## Hecho en React con Redux y Firebase como base de datos.
